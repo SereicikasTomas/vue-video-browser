@@ -2,6 +2,7 @@
   <div>
     <SearchBar @termChange="onTermChange"></SearchBar>
     <VideoList> </VideoList>
+    {{ videos.length }}
   </div>
 </template>
 
@@ -9,13 +10,17 @@
 import axios from "axios";
 import SearchBar from "./components/SearchBar";
 import VideoList from "./components/VideoList";
-const API_KEY = "AIzaSyAHrrNJZZFth5USadODeYniISqGpY_GK7k";
 
 export default {
   name: "App",
   components: {
     SearchBar,
     VideoList
+  },
+  data() {
+    return {
+      videos: []
+    };
   },
   methods: {
     onTermChange: async function(searchTerm) {
@@ -24,16 +29,16 @@ export default {
           "https://www.googleapis.com/youtube/v3/search",
           {
             params: {
-              key: API_KEY,
+              key: process.env.VUE_APP_API_KEY,
               type: "video",
               part: "snippet",
               q: searchTerm
             }
           }
         );
-        console.log(response);
+        this.videos = response.data.items;
       } catch (error) {
-        throw new Error(error);
+        console.error(error);
       }
     }
   }
