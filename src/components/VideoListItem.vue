@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li @click="onVideoSelect">
     <img :src="thumbnailUrl" />
     <h4>{{ videoTitle }}</h4>
   </li>
@@ -15,6 +15,11 @@ export default {
     },
     videoTitle() {
       return this.video.snippet.title;
+    }
+  },
+  methods: {
+    onVideoSelect() {
+      this.$emit("videoSelect", this.video);
     }
   }
 };
