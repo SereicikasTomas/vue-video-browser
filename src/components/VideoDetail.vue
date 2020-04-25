@@ -1,7 +1,7 @@
 <template>
   <div v-if="video">
-    <div>
-      <iframe :src="videoUrl" />
+    <div class="video" style="padding-top: 56.25%;">
+      <iframe :src="videoUrl" frameborder="0" allowfullscreen />
     </div>
     <div class="details">
       <h2>{{ video.snippet.title }}</h2>
@@ -23,4 +23,15 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.video {
+  position: relative;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+</style>
