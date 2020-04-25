@@ -1,6 +1,7 @@
 <template>
   <div class="app">
     <SearchBar @termChange="onTermChange"></SearchBar>
+    <VideoDetail :video="selectedVideo" />
     <VideoList @videoSelect="onVideoSelect" :videos="videos"> </VideoList>
   </div>
 </template>
@@ -9,16 +10,19 @@
 import axios from "axios";
 import SearchBar from "./components/SearchBar";
 import VideoList from "./components/VideoList";
+import VideoDetail from "./components/VideoDetail";
 
 export default {
   name: "App",
   components: {
     SearchBar,
-    VideoList
+    VideoList,
+    VideoDetail
   },
   data() {
     return {
-      videos: []
+      videos: [],
+      selectedVideo: null
     };
   },
   methods: {
@@ -41,7 +45,7 @@ export default {
       }
     },
     onVideoSelect(video) {
-      console.log(video);
+      this.selectedVideo = video;
     }
   }
 };
