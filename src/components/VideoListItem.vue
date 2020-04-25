@@ -1,14 +1,22 @@
 <template>
   <li>
-    <img :src="video.snippet.thumbnails.default.url" />
-    {{ video.snippet.title }}
+    <img :src="thumbnailUrl" />
+    {{ videoTitle }}
   </li>
 </template>
 
 <script>
 export default {
   name: "VideoListItem",
-  props: ["video"]
+  props: ["video"],
+  computed: {
+    thumbnailUrl() {
+      return this.video.snippet.thumbnails.default.url;
+    },
+    videoTitle() {
+      return this.video.snippet.title;
+    }
+  }
 };
 </script>
 
