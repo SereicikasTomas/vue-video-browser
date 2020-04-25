@@ -17,4 +17,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+ul {
+  font-size: 1.8rem;
+  list-style: none;
+}
+</style>
