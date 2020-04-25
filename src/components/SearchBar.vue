@@ -17,9 +17,9 @@ export default {
 
 <style lang="scss" scoped>
 input {
-  border: 2px solid rgb(182, 182, 182);
+  border: 2px solid lightgray;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1rem 2rem;
   font-size: 1.4rem;
   width: 100%;
   outline: 0;
