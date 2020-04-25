@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <SearchBar @termChange="onTermChange"></SearchBar>
     <VideoList :videos="videos"> </VideoList>
   </div>
@@ -43,3 +43,23 @@ export default {
   }
 };
 </script>
+
+<style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  max-width: 100rem;
+  height: 50vh;
+  margin: auto;
+  margin-top: 10vh;
+}
+</style>
