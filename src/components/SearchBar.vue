@@ -16,14 +16,17 @@ export default {
 <style lang="scss" scoped>
 input {
   background: transparent;
-  border: 2px solid lightgray;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
   border-radius: 10px;
   padding: 1rem 2rem;
   font-size: 1.4rem;
   width: 100%;
   outline: 0;
-  &:focus {
-    outline: 0.1rem dotted red;
+  letter-spacing: 1px;
+  &::placeholder {
+    color: white;
   }
   grid-column: 1 / 3;
 }

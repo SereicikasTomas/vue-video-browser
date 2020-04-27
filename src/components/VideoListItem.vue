@@ -27,28 +27,30 @@ export default {
 
 <style lang="scss" scoped>
 li {
-  padding: 1rem 2rem;
-  border: 2px solid lightgray;
   border-radius: 10px;
+  border-bottom: 1px solid transparent;
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition: border-bottom 400ms ease;
 
   &:not(:first-child) {
     margin-top: 1rem;
   }
 
   img {
-    border-radius: 5px;
+    border-radius: 10px;
   }
 
   p {
     margin-left: 2rem;
     font-weight: 500;
+    color: white;
+    line-height: 1.4;
   }
 
   &:hover {
-    background-color: rgba(221, 221, 221, 0.9);
+    border-bottom: 1px solid white;
   }
 }
 </style>

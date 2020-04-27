@@ -61,7 +61,7 @@ export default {
 html {
   font-size: 62.5%;
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(0deg, rgb(38, 84, 112), rgb(255, 255, 255))
+  background: linear-gradient(45deg, rgb(43, 33, 93), rgb(81, 240, 237))
     no-repeat fixed center;
 }
 
@@ -75,8 +75,8 @@ p {
 
 .app {
   max-width: 120rem;
-  height: 50vh;
   margin: auto;
+  margin-top: 10vh;
   display: grid;
   grid-template-rows: min-content auto;
   grid-template-columns: 3fr 2fr;

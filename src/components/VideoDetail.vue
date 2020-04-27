@@ -40,9 +40,8 @@ export default {
   }
 }
 .details {
+  color: white;
   margin-top: 2rem;
-  padding: 1rem 2rem;
-  border: 2px solid lightgray;
   border-radius: 10px;
   h2 {
     margin-bottom: 2rem;
