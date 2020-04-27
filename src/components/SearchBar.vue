@@ -19,8 +19,7 @@ input {
   border: none;
   border-bottom: 1px solid white;
   color: white;
-  border-radius: 10px;
-  padding: 1rem 2rem;
+  padding: 1rem 0rem;
   font-size: 1.4rem;
   width: 100%;
   outline: 0;

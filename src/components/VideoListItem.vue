@@ -28,11 +28,12 @@ export default {
 <style lang="scss" scoped>
 li {
   border-radius: 10px;
-  border-bottom: 1px solid transparent;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: border-bottom 400ms ease;
+  transition: border 400ms ease;
 
   &:not(:first-child) {
     margin-top: 1rem;
@@ -50,7 +51,8 @@ li {
   }
 
   &:hover {
-    border-bottom: 1px solid white;
+    border-top: 1px solid rgb(81, 240, 237);
+    border-bottom: 1px solid rgb(81, 240, 237);
   }
 }
 </style>
