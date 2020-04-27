@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <input type="text" @input="onInput" />
-  </div>
+  <input placeholder="Search for a video..." type="text" @input="onInput" />
 </template>
 
 <script>
@@ -17,6 +15,7 @@ export default {
 
 <style lang="scss" scoped>
 input {
+  background: transparent;
   border: 2px solid lightgray;
   border-radius: 10px;
   padding: 1rem 2rem;
@@ -26,5 +25,6 @@ input {
   &:focus {
     outline: 0.1rem dotted red;
   }
+  grid-column: 1 / 3;
 }
 </style>

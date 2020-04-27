@@ -1,7 +1,7 @@
 <template>
   <li @click="onVideoSelect">
     <img :src="thumbnailUrl" />
-    <h4>{{ videoTitle }}</h4>
+    <p>{{ videoTitle }}</p>
   </li>
 </template>
 
@@ -27,18 +27,22 @@ export default {
 
 <style lang="scss" scoped>
 li {
-  margin-top: 0.5rem;
   padding: 1rem 2rem;
   border: 2px solid lightgray;
   border-radius: 10px;
   display: flex;
+  align-items: center;
   cursor: pointer;
+
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
 
   img {
     border-radius: 5px;
   }
 
-  h4 {
+  p {
     margin-left: 2rem;
     font-weight: 500;
   }

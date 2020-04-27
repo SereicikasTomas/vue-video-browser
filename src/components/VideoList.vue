@@ -31,5 +31,14 @@ export default {
 ul {
   font-size: 1.8rem;
   list-style: none;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+}
+
+@media only screen and (max-width: 56.25em) {
+  ul {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+  }
 }
 </style>

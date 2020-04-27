@@ -1,5 +1,5 @@
 <template>
-  <div v-if="video">
+  <div class="video-detail" v-if="video">
     <div class="video" style="padding-top: 56.25%;">
       <iframe :src="videoUrl" frameborder="0" allowfullscreen />
     </div>
@@ -24,6 +24,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.video-detail {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
 .video {
   position: relative;
   iframe {
@@ -32,6 +36,16 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 10px;
+  }
+}
+.details {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  h2 {
+    margin-bottom: 2rem;
   }
 }
 </style>

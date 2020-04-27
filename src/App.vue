@@ -61,12 +61,34 @@ export default {
 html {
   font-size: 62.5%;
   font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(0deg, rgb(38, 84, 112), rgb(255, 255, 255))
+    no-repeat fixed center;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.4rem;
 }
 
 .app {
-  max-width: 100rem;
+  max-width: 120rem;
   height: 50vh;
   margin: auto;
-  margin-top: 10vh;
+  display: grid;
+  grid-template-rows: min-content auto;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .app {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    column-gap: 0;
+  }
 }
 </style>
