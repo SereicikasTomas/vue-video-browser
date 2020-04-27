@@ -51,8 +51,8 @@ li {
   }
 
   &:hover {
-    border-top: 1px solid rgb(81, 240, 237);
-    border-bottom: 1px solid rgb(81, 240, 237);
+    border-top: 1px solid lightsalmon;
+    border-bottom: 1px solid lightsalmon;
   }
 }
 </style>

@@ -2,6 +2,10 @@
 
 First vue.js project
 
+## Project Screenshot
+
+![screenshot](Screenshot.png)
+
 ## Project setup
 
 ```
