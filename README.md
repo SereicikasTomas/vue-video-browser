@@ -1,6 +1,6 @@
 # video-browser
 
-First vue.js project
+First vue.js project using youtube api to fetch videos.
 
 ## Project Screenshot
 
